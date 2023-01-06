@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Pr-Eg-ydi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Catalog-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Catalog" customClass="ProductCatalogViewController" customModule="Shoppable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiO-0g-6hp" customClass="CatalogViewWrapper" customModule="Shoppable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZiO-0g-6hp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tmd-kj-d6f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZiO-0g-6hp" secondAttribute="trailing" id="VHY-vC-0Hd"/>
+                            <constraint firstItem="ZiO-0g-6hp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YWc-Hb-gxg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZiO-0g-6hp" secondAttribute="bottom" id="xKy-4g-DyF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Catalog" image="book.fill" catalog="system" id="q7I-E3-YMc"/>
+                    <connections>
+                        <outlet property="catalogViewWrapper" destination="ZiO-0g-6hp" id="ukO-lQ-NGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-482" y="744"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="ftn-Ea-wGx">
+            <objects>
+                <viewController id="F6z-EM-hvY" userLabel="Cart" customClass="CartViewController" customModule="Shoppable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lkc-AA-NsW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJr-pU-PHr" customClass="CartViewWrapper" customModule="Shoppable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F8M-ct-sSO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nJr-pU-PHr" firstAttribute="top" secondItem="F8M-ct-sSO" secondAttribute="top" id="6JW-iq-mHT"/>
+                            <constraint firstItem="nJr-pU-PHr" firstAttribute="bottom" secondItem="F8M-ct-sSO" secondAttribute="bottom" id="RVe-DD-Sgu"/>
+                            <constraint firstAttribute="trailing" secondItem="nJr-pU-PHr" secondAttribute="trailing" id="Xhq-kE-GKd"/>
+                            <constraint firstItem="nJr-pU-PHr" firstAttribute="leading" secondItem="F8M-ct-sSO" secondAttribute="leading" id="boV-6O-geQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cart" image="bag.fill" catalog="system" id="ac0-uL-uyS"/>
+                    <connections>
+                        <outlet property="cartViewWrapper" destination="nJr-pU-PHr" id="hyD-HN-w2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvb-Sw-hkC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="744"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="TKf-UA-8lj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7Pr-Eg-ydi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p1t-2K-apb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="0iV-uc-z95"/>
+                        <segue destination="F6z-EM-hvY" kind="relationship" relationship="viewControllers" id="PP1-FV-saq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzc-V6-VxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
